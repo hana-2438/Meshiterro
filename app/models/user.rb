@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable#：パスワードをリセット、：ログイン情報を保存、：emailのフォーマットなどのバリデーション
   has_many :post_images, dependent: :destroy
   has_many :post_comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
 has_one_attached :profile_image
 
